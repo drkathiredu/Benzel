@@ -1,0 +1,21 @@
+services:
+  beszel:
+    image: henrygd/beszel:latest
+    restart: unless-stopped
+    expose:
+      - "8090"
+    volumes:
+      - beszel-data:/beszel_data
+
+  beszel-agent:
+    image: henrygd/beszel-agent:latest
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - PORT=45876
+      - KEY=PASTE_KEY_FROM_HUB_AFTER_FIRST_START
+
+volumes:
+  beszel-data:
