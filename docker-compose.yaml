@@ -15,8 +15,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - HUB_URL=https://status.drkathiravan.uk
+      - TOKEN=04193d8e-642c-4e28-930a-a04b614de687
       - PORT=45876
       - KEY=ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILpRKJEvnMrczfFye8ofP9h/qhMkZ+u7IEvqVV3emkI/
 
 volumes:
   beszel-data:
+  
