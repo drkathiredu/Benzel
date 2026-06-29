@@ -15,7 +15,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       - PORT=45876
-      - KEY=PASTE_KEY_FROM_HUB_AFTER_FIRST_START
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILpRKJEvnMrczfFye8ofP9h/qhMkZ+u7IEvqVV3emkI/
 
 volumes:
   beszel-data:
